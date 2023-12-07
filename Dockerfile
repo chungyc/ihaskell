@@ -161,6 +161,12 @@ RUN    stack build $STACK_ARGS ihaskell-aeson \
     && fix-permissions /opt/IHaskell \
     && fix-permissions /opt/hvega
 
+# Install custom packages.
+RUN    stack build $STACK_ARGS hspec \
+    && stack build $STACK_ARGS QuickCheck \
+    && fix-permissions /opt/IHaskell \
+    && fix-permissions $STACK_ROOT
+
 # Cleanup
 # Don't clean IHaskell/.stack-work, 7GB, this causes issue #5
 #   && rm -rf $(find /opt/IHaskell -type d -name .stack-work) \
