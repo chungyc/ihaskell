@@ -208,6 +208,8 @@ RUN \
 #     && rm -rf /opt/IHaskell/jupyterlab-ihaskell/node_modules
 
 RUN conda install --quiet --yes \
+# Custom install
+    'nbgitpuller' \
 # ihaskell-widgets needs ipywidgets
 # https://github.com/IHaskell/IHaskell/issues/1380
     'ipywidgets=7.7.1' && \
