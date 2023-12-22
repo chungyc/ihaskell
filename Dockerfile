@@ -164,6 +164,7 @@ RUN    stack build $STACK_ARGS ihaskell-aeson \
 # Install custom packages.
 RUN    stack build $STACK_ARGS hspec \
     && stack build $STACK_ARGS QuickCheck \
+    && stack build $STACK_ARGS statistics \
     && fix-permissions /opt/IHaskell \
     && fix-permissions $STACK_ROOT
 
