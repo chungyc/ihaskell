@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=jupyter/base-notebook:lab-3.2.4@sha256:438e87954dedd8b3c0088c89923ed29c9e14f139428c98d79c9ebabe55adc01d
+ARG BASE_CONTAINER=jupyter/base-notebook:lab-4.0.7@sha256:0ec801994602a53d3917d0f07ccf4474a1ddf5ae419483b24681a3c42abc4ce5
 
 # JupyterLab versions > 3.2.4 have this bug:
 # https://github.com/jupyterlab/jupyterlab/issues/13383
@@ -65,7 +65,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 #
 #    curl -sSL https://get.haskellstack.org/ | sh
 #
-ARG STACK_VERSION="2.11.1"
+ARG STACK_VERSION="3.1.1"
 ARG STACK_BINDIST="stack-${STACK_VERSION}-linux-x86_64"
 RUN    cd /tmp \
     && curl -sSL --output ${STACK_BINDIST}.tar.gz https://github.com/commercialhaskell/stack/releases/download/v${STACK_VERSION}/${STACK_BINDIST}.tar.gz \
@@ -107,15 +107,15 @@ ENV PATH ${PATH}:/opt/bin
 # The resolver for all stack builds will be chosen from
 # the IHaskell/stack.yaml in this commit.
 # https://github.com/gibiansky/IHaskell/commits/master
-# IHaskell 2022-12-19
-ARG IHASKELL_COMMIT=1c22a874ac0c8ed019229f4a0cd5a0bfda017357
+# IHaskell 2024-12-21
+ARG IHASKELL_COMMIT=95f0f318a14892c32a26f9ef5df0e53c4113976a
 
 # Specify a git branch for hvega
 # https://github.com/DougBurke/hvega/commits/main
-# hvega 2022-06-16
-# hvega-0.12.0.3
-# ihaskell-hvega-0.5.0.3
-ARG HVEGA_COMMIT=2b453c230294b889564339853de02b0c1829a081
+# hvega 2023-09-28
+# hvega-0.12.0.7
+# ihaskell-hvega-0.5.0.5
+ARG HVEGA_COMMIT=543db34bc154fe52c2843e58589846eb80192f44
 
 # Clone IHaskell and install ghc from the IHaskell resolver
 RUN    cd /opt \
