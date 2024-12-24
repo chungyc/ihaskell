@@ -11,3 +11,4 @@ these packages are available for import.
 
 *   [Hspec](https://hspec.github.io/)
 *   [QuickCheck](https://hackage.haskell.org/package/QuickCheck)
+*   [Symtegration](https://github.com/chungyc/symtegration)
