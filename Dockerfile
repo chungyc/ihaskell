@@ -213,7 +213,7 @@ RUN conda install --quiet --yes \
     'nbgitpuller' \
 # ihaskell-widgets needs ipywidgets
 # https://github.com/IHaskell/IHaskell/issues/1380
-    'ipywidgets=7.7.1' && \
+    'ipywidgets=8.1.5' && \
 # ihaskell-hvega doesn't need an extension. https://github.com/jupyterlab/jupyter-renderers
 #    'jupyterlab-vega3' && \
     conda clean --all -f -y && \
