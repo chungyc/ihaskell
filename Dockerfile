@@ -129,7 +129,7 @@ RUN    cd /opt \
     && stack setup \
     && fix-permissions $STACK_ROOT \
 # Clean 176MB
-    && rm /opt/stack/programs/x86_64-linux/ghc*.tar.xz
+    && rm -rf /opt/stack/programs/x86_64-linux/ghc-*.temp/
 
 # Build IHaskell
 #
