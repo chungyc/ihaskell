@@ -46,4 +46,4 @@ extra-deps:
 - plot-0.2.3.11
 
 - git: https://github.com/chungyc/symtegration.git
-  commit: 'eb609539bbfc6bd9392f0753f752b8fb9beae369'
+  commit: 'db5a77e449bd2f7290cf4697bd7f55d16e49cf64'
