@@ -165,6 +165,7 @@ RUN    stack build $STACK_ARGS ihaskell-aeson \
 RUN    stack build $STACK_ARGS hspec \
     && stack build $STACK_ARGS QuickCheck \
     && stack build $STACK_ARGS statistics \
+    && stack build $STACK_ARGS symtegration \
     && fix-permissions /opt/IHaskell \
     && fix-permissions $STACK_ROOT
 
