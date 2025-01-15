@@ -45,3 +45,5 @@ extra-deps:
 - gtk2hs-buildtools-0.13.10.0
 - plot-0.2.3.11
 
+- git: https://github.com/chungyc/symtegration.git
+  commit: 'b3f4cbff339c7a22842422146504a99efcd193ed'
