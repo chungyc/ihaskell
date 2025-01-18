@@ -209,7 +209,7 @@ RUN \
 # # Clean jupyterlab-ihaskell/node_nodemodules, 86MB
 #     && rm -rf /opt/IHaskell/jupyterlab-ihaskell/node_modules
 
-RUN conda install -n --quiet --yes base conda-libmamba-solver && \
+RUN conda install --quiet --yes -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
     conda install --quiet --yes \
 # Custom install
