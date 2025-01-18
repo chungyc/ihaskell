@@ -212,7 +212,6 @@ RUN \
 RUN conda config --set solver classic && \
     conda config --set channel_priority flexible && \
     conda update --yes -n base conda && \
-    conda install --yes -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
     conda install --yes \
 # Custom install
