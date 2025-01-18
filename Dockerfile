@@ -210,7 +210,7 @@ RUN \
 #     && rm -rf /opt/IHaskell/jupyterlab-ihaskell/node_modules
 
 RUN conda config --set channel_priority flexible && \
-    conda update --yes -n base conda && \
+    conda update --yes --satisfied-skip-solve -n base conda && \
     conda install -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
     conda install --yes \
