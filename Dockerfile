@@ -210,10 +210,10 @@ RUN \
 #     && rm -rf /opt/IHaskell/jupyterlab-ihaskell/node_modules
 
 RUN conda config --set channel_priority flexible && \
-    conda update --yes --satisfied-skip-solve -n base conda && \
-    conda install -n base conda-libmamba-solver && \
+    conda update --quiet --yes -n base conda && \
+    conda install --quiet --yes --satisfied-skip-solve -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
-    conda install --yes \
+    conda install --quiet --yes \
 # Custom install
       'nbgitpuller' \
 # ihaskell-widgets needs ipywidgets
