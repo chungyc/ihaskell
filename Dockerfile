@@ -210,10 +210,10 @@ RUN \
 #     && rm -rf /opt/IHaskell/jupyterlab-ihaskell/node_modules
 
 RUN conda config --set solver classic && \
+    conda config --set channel_priority flexible && \
     conda update --yes -n base conda && \
     conda install --yes -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
-    conda config --set channel_priority flexible && \
     conda install --yes \
 # Custom install
       'nbgitpuller' \
