@@ -211,6 +211,7 @@ RUN \
 
 RUN conda install --quiet --yes -n base conda-libmamba-solver && \
     conda config --set solver libmamba && \
+    conda config --set channel_priority flexible && \
     conda install --quiet --yes \
 # Custom install
       'nbgitpuller' \
