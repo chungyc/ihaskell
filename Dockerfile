@@ -166,6 +166,7 @@ RUN    stack build $STACK_ARGS hspec \
     && stack build $STACK_ARGS QuickCheck \
     && stack build $STACK_ARGS statistics \
     && stack build $STACK_ARGS symtegration \
+    && stack build $STACK_ARGS ihaskell-symtegration \
     && fix-permissions /opt/IHaskell \
     && fix-permissions $STACK_ROOT
 

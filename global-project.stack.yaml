@@ -45,5 +45,7 @@ extra-deps:
 - gtk2hs-buildtools-0.13.10.0
 - plot-0.2.3.11
 
-- git: https://github.com/chungyc/symtegration.git
-  commit: 'f273101fe66e8209194e9f03ccbcf322c4f4be12'
+- symtegration-0.6.1
+
+- git: https://github.com/symtegration/ihaskell.git
+  commit: '3e05014ae8891a92c7a63d467160dc652d186991'
